@@ -1,0 +1,6 @@
+this is my second file 
+:q!
+cat
+[A[C[C[C>>file2.txt
+
+new file
