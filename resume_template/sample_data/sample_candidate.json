@@ -1,0 +1,101 @@
+{
+    "candidate_name": "Priya Sharma",
+    "email": "priya.sharma@email.com",
+    "phone": "+91 98765 43210",
+    "location": "Bangalore, India",
+    "linkedin": "linkedin.com/in/priyasharma",
+    "portfolio": "priyasharma.dev",
+    "applied_position": "Senior Full-Stack Developer",
+    "summary": "Results-driven full-stack developer with 6+ years of experience building scalable web applications and microservices. Strong expertise in React, Node.js, and cloud-native architectures. Passionate about clean code, mentoring junior developers, and delivering high-impact solutions in fast-paced environments.",
+    "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "REST APIs",
+        "GraphQL",
+        "Git",
+        "Agile/Scrum"
+    ],
+    "experience": [
+        {
+            "title": "Full-Stack Developer",
+            "company": "TechNova Solutions",
+            "location": "Bangalore, India",
+            "start_date": "Mar 2021",
+            "end_date": "Present",
+            "responsibilities": [
+                "Led development of a customer-facing SaaS platform serving 50K+ users, reducing page load times by 40% through performance optimization",
+                "Designed and implemented RESTful microservices using Node.js and Express, handling 10K+ requests per minute",
+                "Mentored a team of 4 junior developers through code reviews, pair programming, and technical knowledge-sharing sessions",
+                "Introduced automated CI/CD pipelines with GitHub Actions, reducing deployment time from 2 hours to 15 minutes"
+            ]
+        },
+        {
+            "title": "Software Developer",
+            "company": "DataBridge Analytics",
+            "location": "Hyderabad, India",
+            "start_date": "Jun 2019",
+            "end_date": "Feb 2021",
+            "responsibilities": [
+                "Built interactive data visualization dashboards using React and D3.js for enterprise clients",
+                "Developed Python-based ETL pipelines processing 2M+ records daily with 99.9% reliability",
+                "Migrated legacy monolith application to containerized microservices on AWS ECS, improving scalability"
+            ]
+        },
+        {
+            "title": "Junior Developer",
+            "company": "WebCraft Studios",
+            "location": "Chennai, India",
+            "start_date": "Jul 2017",
+            "end_date": "May 2019",
+            "responsibilities": [
+                "Developed responsive web applications using React and Redux for clients across e-commerce and healthcare sectors",
+                "Implemented unit and integration tests achieving 85% code coverage using Jest and Cypress",
+                "Collaborated with UX designers to translate wireframes into pixel-perfect, accessible UI components"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Tech in Computer Science and Engineering",
+            "institution": "National Institute of Technology, Trichy",
+            "location": "Tiruchirappalli, India",
+            "graduation_date": "May 2017",
+            "gpa": "8.7/10"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "AWS Certified Solutions Architect - Associate",
+            "issuer": "Amazon Web Services",
+            "date": "Sep 2023"
+        },
+        {
+            "name": "Meta Front-End Developer Professional Certificate",
+            "issuer": "Meta / Coursera",
+            "date": "Jan 2022"
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "proficiency": "Professional"
+        },
+        {
+            "language": "Hindi",
+            "proficiency": "Native"
+        },
+        {
+            "language": "Tamil",
+            "proficiency": "Conversational"
+        }
+    ]
+}

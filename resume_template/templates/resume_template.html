@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ candidate_name }} - CoolSnail Technologies Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #2d2d2d;
+            background: #ffffff;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 0;
+        }
+
+        /* ── Header / Branding Bar ── */
+        .header {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            color: #ffffff;
+            padding: 24px 36px 20px 36px;
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #48bb78, #38b2ac, #4299e1);
+        }
+
+        .company-tag {
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #90cdf4;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .candidate-name {
+            font-size: 22pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .applied-position {
+            font-size: 11pt;
+            color: #bee3f8;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 9pt;
+            color: #e2e8f0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .contact-item .label {
+            font-weight: 600;
+            color: #90cdf4;
+        }
+
+        /* ── Body Layout ── */
+        .body {
+            display: flex;
+            padding: 0;
+        }
+
+        /* ── Sidebar ── */
+        .sidebar {
+            width: 35%;
+            background: #f7fafc;
+            padding: 24px 20px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .sidebar .section {
+            margin-bottom: 22px;
+        }
+
+        .sidebar .section-title {
+            font-size: 9pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #1a365d;
+            border-bottom: 2px solid #4299e1;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skills-list li {
+            background: #ebf4ff;
+            color: #2b6cb0;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 8.5pt;
+            font-weight: 500;
+        }
+
+        /* Education */
+        .edu-entry {
+            margin-bottom: 12px;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            font-size: 9.5pt;
+            color: #2d3748;
+        }
+
+        .edu-institution {
+            font-size: 9pt;
+            color: #4a5568;
+        }
+
+        .edu-meta {
+            font-size: 8.5pt;
+            color: #718096;
+        }
+
+        /* Certifications */
+        .cert-entry {
+            margin-bottom: 8px;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            font-size: 9pt;
+            color: #2d3748;
+        }
+
+        .cert-meta {
+            font-size: 8.5pt;
+            color: #718096;
+        }
+
+        /* Languages */
+        .lang-entry {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+            font-size: 9pt;
+        }
+
+        .lang-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .lang-level {
+            color: #718096;
+        }
+
+        /* ── Main Content ── */
+        .main {
+            width: 65%;
+            padding: 24px 28px;
+        }
+
+        .main .section {
+            margin-bottom: 22px;
+        }
+
+        .main .section-title {
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #1a365d;
+            border-bottom: 2px solid #4299e1;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+
+        /* Summary */
+        .summary-text {
+            font-size: 9.5pt;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Experience */
+        .exp-entry {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 10pt;
+            color: #1a365d;
+        }
+
+        .exp-dates {
+            font-size: 8.5pt;
+            color: #718096;
+            white-space: nowrap;
+        }
+
+        .exp-company {
+            font-size: 9.5pt;
+            color: #2b6cb0;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .exp-location {
+            color: #718096;
+            font-weight: 400;
+        }
+
+        .exp-responsibilities {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exp-responsibilities li {
+            font-size: 9pt;
+            color: #4a5568;
+            padding: 2px 0 2px 14px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .exp-responsibilities li::before {
+            content: "\25B8";
+            position: absolute;
+            left: 0;
+            color: #4299e1;
+            font-size: 8pt;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background: #f7fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 10px 36px;
+            text-align: center;
+            font-size: 7.5pt;
+            color: #a0aec0;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            color: #4299e1;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-tag">CoolSnail Technologies &mdash; Candidate Profile</div>
+            <div class="candidate-name">{{ candidate_name }}</div>
+            {% if applied_position %}
+            <div class="applied-position">Applying for: {{ applied_position }}</div>
+            {% endif %}
+            <div class="contact-row">
+                <div class="contact-item"><span class="label">Email:</span> {{ email }}</div>
+                <div class="contact-item"><span class="label">Phone:</span> {{ phone }}</div>
+                {% if location %}
+                <div class="contact-item"><span class="label">Location:</span> {{ location }}</div>
+                {% endif %}
+                {% if linkedin %}
+                <div class="contact-item"><span class="label">LinkedIn:</span> {{ linkedin }}</div>
+                {% endif %}
+                {% if portfolio %}
+                <div class="contact-item"><span class="label">Portfolio:</span> {{ portfolio }}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="body">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                {% if skills %}
+                <div class="section">
+                    <div class="section-title">Skills</div>
+                    <ul class="skills-list">
+                        {% for skill in skills %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                {% if education %}
+                <div class="section">
+                    <div class="section-title">Education</div>
+                    {% for edu in education %}
+                    <div class="edu-entry">
+                        <div class="edu-degree">{{ edu.degree }}</div>
+                        <div class="edu-institution">{{ edu.institution }}</div>
+                        {% if edu.location or edu.graduation_date %}
+                        <div class="edu-meta">
+                            {% if edu.location %}{{ edu.location }}{% endif %}
+                            {% if edu.location and edu.graduation_date %} | {% endif %}
+                            {% if edu.graduation_date %}{{ edu.graduation_date }}{% endif %}
+                        </div>
+                        {% endif %}
+                        {% if edu.gpa %}
+                        <div class="edu-meta">GPA: {{ edu.gpa }}</div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if certifications %}
+                <div class="section">
+                    <div class="section-title">Certifications</div>
+                    {% for cert in certifications %}
+                    <div class="cert-entry">
+                        <div class="cert-name">{{ cert.name }}</div>
+                        <div class="cert-meta">
+                            {% if cert.issuer %}{{ cert.issuer }}{% endif %}
+                            {% if cert.issuer and cert.date %} | {% endif %}
+                            {% if cert.date %}{{ cert.date }}{% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if languages %}
+                <div class="section">
+                    <div class="section-title">Languages</div>
+                    {% for lang in languages %}
+                    <div class="lang-entry">
+                        <span class="lang-name">{{ lang.language }}</span>
+                        <span class="lang-level">{{ lang.proficiency }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Main Content -->
+            <div class="main">
+                {% if summary %}
+                <div class="section">
+                    <div class="section-title">Professional Summary</div>
+                    <div class="summary-text">{{ summary }}</div>
+                </div>
+                {% endif %}
+
+                {% if experience %}
+                <div class="section">
+                    <div class="section-title">Professional Experience</div>
+                    {% for exp in experience %}
+                    <div class="exp-entry">
+                        <div class="exp-header">
+                            <div class="exp-title">{{ exp.title }}</div>
+                            <div class="exp-dates">{{ exp.start_date }} &ndash; {{ exp.end_date | default("Present") }}</div>
+                        </div>
+                        <div class="exp-company">
+                            {{ exp.company }}
+                            {% if exp.location %}<span class="exp-location"> | {{ exp.location }}</span>{% endif %}
+                        </div>
+                        {% if exp.responsibilities %}
+                        <ul class="exp-responsibilities">
+                            {% for item in exp.responsibilities %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span class="footer-brand">CoolSnail Technologies</span> &mdash; Standardized Candidate Resume &mdash; Confidential
+        </div>
+    </div>
+</body>
+</html>
